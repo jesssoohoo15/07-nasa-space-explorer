@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NASA Space Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Public+Sans:wght@400;600&family=DM+Mono&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -19,11 +21,22 @@
       <button>Get Space Images</button>
     </div>
 
+    <!-- Random space fact — filled in by script.js on page load -->
+    <section id="spaceFact" class="space-fact"></section>
+
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal — hidden until a gallery item is clicked -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
     </div>
   </div>
 
